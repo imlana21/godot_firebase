@@ -1,0 +1,170 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpmwn5wxr8ex0"]
+
+[ext_resource type="Script" path="res://project/auth.gd" id="1_la8ry"]
+
+[node name="Auth" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_la8ry")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -18.0
+offset_top = -18.0
+offset_right = 1168.0
+offset_bottom = 656.0
+color = Color(0.212305, 0.212305, 0.212305, 1)
+
+[node name="Form" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -216.5
+offset_top = -226.0
+offset_right = 216.5
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Email" type="VBoxContainer" parent="Form"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.5
+offset_top = -153.5
+offset_right = 164.5
+offset_bottom = -86.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Form/Email"]
+layout_mode = 2
+text = "Email"
+
+[node name="Input" type="TextEdit" parent="Form/Email"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Your Email"
+
+[node name="Password" type="VBoxContainer" parent="Form"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.5
+offset_top = -65.5
+offset_right = 164.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Form/Password"]
+layout_mode = 2
+text = "Password
+"
+
+[node name="Input" type="LineEdit" parent="Form/Password"]
+custom_minimum_size = Vector2(20, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+placeholder_text = "Your Password"
+secret = true
+
+[node name="RuleValidation" type="HBoxContainer" parent="Form"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.5
+offset_top = 16.0
+offset_right = 164.5
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CheckBox" type="CheckBox" parent="Form/RuleValidation"]
+layout_mode = 2
+action_mode = 0
+
+[node name="Label" type="Label" parent="Form/RuleValidation"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Do you agree with the rules that apply to 
+this game?"
+
+[node name="Control" type="Control" parent="Form"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 12.0
+offset_right = 20.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoginButton" type="Button" parent="Form/Control"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = 47.0
+offset_right = -70.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "    Login    "
+
+[node name="RegisterButton" type="Button" parent="Form/Control"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 56.0
+offset_top = 47.0
+offset_right = 152.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "   Register   "
+
+[node name="Label" type="Label" parent="Form"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -292.5
+offset_right = 291.5
+offset_bottom = 54.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Form/Control/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="Form/Control/RegisterButton" to="." method="_on_register_button_pressed"]
