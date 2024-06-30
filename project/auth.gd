@@ -53,8 +53,7 @@ func show_label(text):
 	$Form/Label.show()
 	await get_tree().create_timer(5).timeout
 	$Form/Label.hide()
-
-
+	                   
 # Eamail = admin@stormy.project
 # Password = admin123456
 
