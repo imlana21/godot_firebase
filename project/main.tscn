@@ -1,8 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://clldij5tytar4"]
+[gd_scene load_steps=10 format=3 uid="uid://clldij5tytar4"]
 
 [ext_resource type="Script" path="res://project/main.gd" id="1_ymab0"]
-[ext_resource type="Script" path="res://project/scratch_screen.gd" id="2_muwtn"]
 [ext_resource type="Texture2D" uid="uid://cvdqonx3j38yq" path="res://assets/mommy.jpg" id="2_uro56"]
+[ext_resource type="Script" path="res://project/scratch_panel.gd" id="3_knj1w"]
+[ext_resource type="PackedScene" uid="uid://1bwpm6v07hqy" path="res://project/properties/screen_label.tscn" id="4_5xpgr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nibas"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pxa8"]
 bg_color = Color(0.633757, 0.633757, 0.633757, 1)
@@ -40,6 +48,18 @@ tracks/2/path = NodePath("Picture:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PenCanvas:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -84,6 +104,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PenCanvas:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_t5nkn"]
 _data = {
@@ -112,6 +144,7 @@ offset_right = 26.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("2_uro56")
 expand_mode = 1
 
@@ -122,2409 +155,1143 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 0
-theme_override_constants/v_separation = 0
-columns = 25
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 15
 
-[node name="1" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="1" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="2" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="3" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="4" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="5" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="6" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="7" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="8" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="9" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="10" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="11" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="12" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="13" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="14" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="15" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="16" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="17" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="18" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="19" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="20" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="21" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="22" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="23" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="24" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="25" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="26" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="27" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="28" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="29" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="30" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="31" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="32" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="33" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="34" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="35" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="36" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="37" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="38" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="39" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="40" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="41" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="42" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="43" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="44" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="45" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="46" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="47" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="48" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="49" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="50" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="51" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="52" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="53" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="54" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="55" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="56" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="57" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="58" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="59" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="60" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="61" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="62" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="63" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="64" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="65" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="66" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="67" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="68" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="69" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="70" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="71" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="72" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="73" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="74" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="75" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="76" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="77" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="78" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="79" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="80" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="81" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="82" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="83" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="84" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="85" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="86" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="87" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="88" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="89" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="90" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="91" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="92" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="93" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="94" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="95" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="96" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="97" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="98" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="99" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="100" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="101" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="102" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="103" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="104" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="105" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="106" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="107" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="108" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="109" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="110" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="111" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="112" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="113" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="114" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="115" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="116" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="117" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="118" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="119" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="120" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="121" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="122" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="123" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="124" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="125" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="126" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="127" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="128" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="129" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="130" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="131" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="132" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="133" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="134" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="135" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="136" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="137" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="138" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="139" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="140" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="141" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="142" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="143" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/1" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="144" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="2" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="145" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="146" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="147" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="148" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="149" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="150" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="151" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="152" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
-
-[node name="153" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/2" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="154" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="3" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="155" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/3" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="156" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="4" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="157" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/4" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="158" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="5" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="159" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/5" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="160" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="6" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="161" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/6" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="162" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="7" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="163" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/7" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="164" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="8" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="165" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/8" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="166" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="9" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="167" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/9" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="168" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="10" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="169" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/10" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="170" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="11" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="171" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/11" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="172" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="12" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="173" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/12" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="174" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="13" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="175" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/13" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="176" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="14" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="177" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/14" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="178" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="15" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="179" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/15" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="180" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="16" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="181" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/16" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="182" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="17" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="183" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/17" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="184" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="18" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="185" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/18" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="186" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="19" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="187" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/19" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="188" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="20" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="189" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/20" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="190" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="21" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="191" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/21" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="192" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="22" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="193" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/22" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="194" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="23" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="195" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/23" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="196" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="24" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="197" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/24" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="198" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="25" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="199" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/25" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="200" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="26" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="201" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/26" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="202" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="27" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="203" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/27" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="204" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="28" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="205" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/28" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="206" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="29" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="207" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/29" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="208" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="30" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="209" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/30" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="210" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="31" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="211" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/31" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="212" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="32" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="213" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/32" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="214" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="33" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="215" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/33" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="216" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="34" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="217" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/34" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="218" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="35" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="219" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/35" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="220" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="36" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="221" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/36" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="222" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="37" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="223" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/37" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="224" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="38" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="225" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/38" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="226" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="39" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="227" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/39" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="228" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="40" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="229" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/40" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="230" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="41" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="231" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/41" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="232" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="42" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="233" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/42" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="234" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="43" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="235" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/43" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="236" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="44" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="237" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/44" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="238" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="45" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="239" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/45" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="240" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="46" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="241" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/46" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="242" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="47" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="243" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/47" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="244" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="48" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="245" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/48" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="246" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="49" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="247" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/49" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="248" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="50" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="249" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/50" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="250" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="51" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="251" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/51" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="252" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="52" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="253" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/52" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="254" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="53" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="255" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/53" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="256" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="54" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="257" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/54" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="258" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="55" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="259" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/55" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="260" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="56" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="261" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/56" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="262" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="57" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="263" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/57" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="264" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="58" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="265" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/58" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="266" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="59" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="267" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/59" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="268" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="60" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="269" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/60" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="270" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="61" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="271" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/61" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="272" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="62" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="273" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/62" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="274" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="63" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="275" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/63" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="276" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="64" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="277" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/64" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="278" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="65" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="279" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/65" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="280" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="66" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="281" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/66" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="282" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="67" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="283" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/67" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="284" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="68" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="285" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/68" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="286" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="69" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="287" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/69" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="288" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="70" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="289" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/70" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="290" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="71" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="291" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/71" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="292" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="72" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="293" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/72" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="294" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="73" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="295" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/73" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="296" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="74" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="297" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/74" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="298" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
+[node name="75" type="Panel" parent="ScratchScreen"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+theme_override_styles/panel = SubResource("StyleBoxFlat_nibas")
+script = ExtResource("3_knj1w")
 
-[node name="299" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="ScreenLabel" parent="ScratchScreen/75" instance=ExtResource("4_5xpgr")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 
-[node name="300" type="ColorRect" parent="ScratchScreen"]
-custom_minimum_size = Vector2(47, 54)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0, 0, 0, 1)
-script = ExtResource("2_muwtn")
+[node name="PenCanvas" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="SplashScreen" type="ColorRect" parent="."]
 layout_mode = 1
@@ -2553,304 +1320,4 @@ libraries = {
 "": SubResource("AnimationLibrary_t5nkn")
 }
 
-[connection signal="gui_input" from="ScratchScreen/1" to="ScratchScreen/1" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/2" to="ScratchScreen/2" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/3" to="ScratchScreen/3" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/4" to="ScratchScreen/4" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/5" to="ScratchScreen/5" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/6" to="ScratchScreen/6" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/7" to="ScratchScreen/7" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/8" to="ScratchScreen/8" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/9" to="ScratchScreen/9" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/10" to="ScratchScreen/10" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/11" to="ScratchScreen/11" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/12" to="ScratchScreen/12" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/13" to="ScratchScreen/13" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/14" to="ScratchScreen/14" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/15" to="ScratchScreen/15" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/16" to="ScratchScreen/16" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/17" to="ScratchScreen/17" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/18" to="ScratchScreen/18" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/19" to="ScratchScreen/19" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/20" to="ScratchScreen/20" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/21" to="ScratchScreen/21" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/22" to="ScratchScreen/22" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/23" to="ScratchScreen/23" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/24" to="ScratchScreen/24" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/25" to="ScratchScreen/25" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/26" to="ScratchScreen/26" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/27" to="ScratchScreen/27" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/28" to="ScratchScreen/28" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/29" to="ScratchScreen/29" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/30" to="ScratchScreen/30" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/31" to="ScratchScreen/31" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/32" to="ScratchScreen/32" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/33" to="ScratchScreen/33" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/34" to="ScratchScreen/34" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/35" to="ScratchScreen/35" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/36" to="ScratchScreen/36" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/37" to="ScratchScreen/37" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/38" to="ScratchScreen/38" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/39" to="ScratchScreen/39" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/40" to="ScratchScreen/40" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/41" to="ScratchScreen/41" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/42" to="ScratchScreen/42" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/43" to="ScratchScreen/43" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/44" to="ScratchScreen/44" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/45" to="ScratchScreen/45" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/46" to="ScratchScreen/46" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/47" to="ScratchScreen/47" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/48" to="ScratchScreen/48" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/49" to="ScratchScreen/49" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/50" to="ScratchScreen/50" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/51" to="ScratchScreen/51" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/52" to="ScratchScreen/52" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/53" to="ScratchScreen/53" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/54" to="ScratchScreen/54" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/55" to="ScratchScreen/55" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/56" to="ScratchScreen/56" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/57" to="ScratchScreen/57" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/58" to="ScratchScreen/58" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/59" to="ScratchScreen/59" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/60" to="ScratchScreen/60" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/61" to="ScratchScreen/61" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/62" to="ScratchScreen/62" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/63" to="ScratchScreen/63" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/64" to="ScratchScreen/64" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/65" to="ScratchScreen/65" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/66" to="ScratchScreen/66" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/67" to="ScratchScreen/67" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/68" to="ScratchScreen/68" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/69" to="ScratchScreen/69" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/70" to="ScratchScreen/70" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/71" to="ScratchScreen/71" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/72" to="ScratchScreen/72" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/73" to="ScratchScreen/73" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/74" to="ScratchScreen/74" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/75" to="ScratchScreen/75" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/76" to="ScratchScreen/76" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/77" to="ScratchScreen/77" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/78" to="ScratchScreen/78" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/79" to="ScratchScreen/79" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/80" to="ScratchScreen/80" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/81" to="ScratchScreen/81" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/82" to="ScratchScreen/82" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/83" to="ScratchScreen/83" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/84" to="ScratchScreen/84" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/85" to="ScratchScreen/85" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/86" to="ScratchScreen/86" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/87" to="ScratchScreen/87" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/88" to="ScratchScreen/88" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/89" to="ScratchScreen/89" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/90" to="ScratchScreen/90" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/91" to="ScratchScreen/91" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/92" to="ScratchScreen/92" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/93" to="ScratchScreen/93" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/94" to="ScratchScreen/94" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/95" to="ScratchScreen/95" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/96" to="ScratchScreen/96" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/97" to="ScratchScreen/97" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/98" to="ScratchScreen/98" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/99" to="ScratchScreen/99" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/100" to="ScratchScreen/100" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/101" to="ScratchScreen/101" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/102" to="ScratchScreen/102" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/103" to="ScratchScreen/103" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/104" to="ScratchScreen/104" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/105" to="ScratchScreen/105" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/106" to="ScratchScreen/106" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/107" to="ScratchScreen/107" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/108" to="ScratchScreen/108" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/109" to="ScratchScreen/109" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/110" to="ScratchScreen/110" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/111" to="ScratchScreen/111" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/112" to="ScratchScreen/112" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/113" to="ScratchScreen/113" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/114" to="ScratchScreen/114" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/115" to="ScratchScreen/115" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/116" to="ScratchScreen/116" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/117" to="ScratchScreen/117" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/118" to="ScratchScreen/118" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/119" to="ScratchScreen/119" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/120" to="ScratchScreen/120" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/121" to="ScratchScreen/121" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/122" to="ScratchScreen/122" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/123" to="ScratchScreen/123" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/124" to="ScratchScreen/124" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/125" to="ScratchScreen/125" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/126" to="ScratchScreen/126" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/127" to="ScratchScreen/127" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/128" to="ScratchScreen/128" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/129" to="ScratchScreen/129" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/130" to="ScratchScreen/130" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/131" to="ScratchScreen/131" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/132" to="ScratchScreen/132" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/133" to="ScratchScreen/133" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/134" to="ScratchScreen/134" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/135" to="ScratchScreen/135" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/136" to="ScratchScreen/136" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/137" to="ScratchScreen/137" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/138" to="ScratchScreen/138" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/139" to="ScratchScreen/139" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/140" to="ScratchScreen/140" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/141" to="ScratchScreen/141" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/142" to="ScratchScreen/142" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/143" to="ScratchScreen/143" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/144" to="ScratchScreen/144" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/145" to="ScratchScreen/145" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/146" to="ScratchScreen/146" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/147" to="ScratchScreen/147" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/148" to="ScratchScreen/148" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/149" to="ScratchScreen/149" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/150" to="ScratchScreen/150" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/151" to="ScratchScreen/151" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/152" to="ScratchScreen/152" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/153" to="ScratchScreen/153" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/154" to="ScratchScreen/154" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/155" to="ScratchScreen/155" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/156" to="ScratchScreen/156" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/157" to="ScratchScreen/157" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/158" to="ScratchScreen/158" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/159" to="ScratchScreen/159" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/160" to="ScratchScreen/160" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/161" to="ScratchScreen/161" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/162" to="ScratchScreen/162" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/163" to="ScratchScreen/163" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/164" to="ScratchScreen/164" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/165" to="ScratchScreen/165" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/166" to="ScratchScreen/166" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/167" to="ScratchScreen/167" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/168" to="ScratchScreen/168" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/169" to="ScratchScreen/169" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/170" to="ScratchScreen/170" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/171" to="ScratchScreen/171" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/172" to="ScratchScreen/172" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/173" to="ScratchScreen/173" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/174" to="ScratchScreen/174" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/175" to="ScratchScreen/175" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/176" to="ScratchScreen/176" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/177" to="ScratchScreen/177" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/178" to="ScratchScreen/178" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/179" to="ScratchScreen/179" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/180" to="ScratchScreen/180" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/181" to="ScratchScreen/181" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/182" to="ScratchScreen/182" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/183" to="ScratchScreen/183" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/184" to="ScratchScreen/184" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/185" to="ScratchScreen/185" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/186" to="ScratchScreen/186" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/187" to="ScratchScreen/187" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/188" to="ScratchScreen/188" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/189" to="ScratchScreen/189" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/190" to="ScratchScreen/190" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/191" to="ScratchScreen/191" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/192" to="ScratchScreen/192" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/193" to="ScratchScreen/193" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/194" to="ScratchScreen/194" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/195" to="ScratchScreen/195" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/196" to="ScratchScreen/196" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/197" to="ScratchScreen/197" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/198" to="ScratchScreen/198" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/199" to="ScratchScreen/199" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/200" to="ScratchScreen/200" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/201" to="ScratchScreen/201" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/202" to="ScratchScreen/202" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/203" to="ScratchScreen/203" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/204" to="ScratchScreen/204" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/205" to="ScratchScreen/205" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/206" to="ScratchScreen/206" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/207" to="ScratchScreen/207" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/208" to="ScratchScreen/208" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/209" to="ScratchScreen/209" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/210" to="ScratchScreen/210" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/211" to="ScratchScreen/211" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/212" to="ScratchScreen/212" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/213" to="ScratchScreen/213" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/214" to="ScratchScreen/214" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/215" to="ScratchScreen/215" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/216" to="ScratchScreen/216" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/217" to="ScratchScreen/217" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/218" to="ScratchScreen/218" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/219" to="ScratchScreen/219" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/220" to="ScratchScreen/220" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/221" to="ScratchScreen/221" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/222" to="ScratchScreen/222" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/223" to="ScratchScreen/223" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/224" to="ScratchScreen/224" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/225" to="ScratchScreen/225" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/226" to="ScratchScreen/226" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/227" to="ScratchScreen/227" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/228" to="ScratchScreen/228" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/229" to="ScratchScreen/229" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/230" to="ScratchScreen/230" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/231" to="ScratchScreen/231" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/232" to="ScratchScreen/232" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/233" to="ScratchScreen/233" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/234" to="ScratchScreen/234" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/235" to="ScratchScreen/235" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/236" to="ScratchScreen/236" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/237" to="ScratchScreen/237" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/238" to="ScratchScreen/238" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/239" to="ScratchScreen/239" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/240" to="ScratchScreen/240" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/241" to="ScratchScreen/241" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/242" to="ScratchScreen/242" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/243" to="ScratchScreen/243" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/244" to="ScratchScreen/244" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/245" to="ScratchScreen/245" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/246" to="ScratchScreen/246" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/247" to="ScratchScreen/247" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/248" to="ScratchScreen/248" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/249" to="ScratchScreen/249" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/250" to="ScratchScreen/250" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/251" to="ScratchScreen/251" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/252" to="ScratchScreen/252" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/253" to="ScratchScreen/253" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/254" to="ScratchScreen/254" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/255" to="ScratchScreen/255" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/256" to="ScratchScreen/256" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/257" to="ScratchScreen/257" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/258" to="ScratchScreen/258" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/259" to="ScratchScreen/259" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/260" to="ScratchScreen/260" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/261" to="ScratchScreen/261" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/262" to="ScratchScreen/262" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/263" to="ScratchScreen/263" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/264" to="ScratchScreen/264" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/265" to="ScratchScreen/265" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/266" to="ScratchScreen/266" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/267" to="ScratchScreen/267" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/268" to="ScratchScreen/268" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/269" to="ScratchScreen/269" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/270" to="ScratchScreen/270" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/271" to="ScratchScreen/271" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/272" to="ScratchScreen/272" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/273" to="ScratchScreen/273" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/274" to="ScratchScreen/274" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/275" to="ScratchScreen/275" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/276" to="ScratchScreen/276" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/277" to="ScratchScreen/277" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/278" to="ScratchScreen/278" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/279" to="ScratchScreen/279" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/280" to="ScratchScreen/280" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/281" to="ScratchScreen/281" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/282" to="ScratchScreen/282" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/283" to="ScratchScreen/283" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/284" to="ScratchScreen/284" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/285" to="ScratchScreen/285" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/286" to="ScratchScreen/286" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/287" to="ScratchScreen/287" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/288" to="ScratchScreen/288" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/289" to="ScratchScreen/289" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/290" to="ScratchScreen/290" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/291" to="ScratchScreen/291" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/292" to="ScratchScreen/292" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/293" to="ScratchScreen/293" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/294" to="ScratchScreen/294" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/295" to="ScratchScreen/295" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/296" to="ScratchScreen/296" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/297" to="ScratchScreen/297" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/298" to="ScratchScreen/298" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/299" to="ScratchScreen/299" method="_on_gui_input"]
-[connection signal="gui_input" from="ScratchScreen/300" to="ScratchScreen/300" method="_on_gui_input"]
 [connection signal="pressed" from="ButtonLogout" to="." method="_on_button_pressed"]
