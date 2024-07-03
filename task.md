@@ -1,13 +1,7 @@
-<!-- - What I need you to do is now once the user logs in, a gaint box or rectangle pops up, that is white -->
+- Understandable make it so it’s just One- number in the middle that’s Large. :white_check_mark: 
 
-- Ontop of it is Black box but in the back end can be replaced with anything picture wise. 
+- make it so the “card” is square shapae :white_check_mark: 
 
-<!-- - The player can use there mouse to "scratch" the black box.  -->
-
-- With a random.number ontop but behind the black box between 1 and 300
-
-- Make the black box a anime Wifeu or something that can be scratched
-
-- Under the wifeu is the number between 1 and 300
-
-516613
+- make a simple button that shifts the player to a main menu  :white_check_mark: 
+  
+- that has the play button and log out button. :white_check_mark: 
