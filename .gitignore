@@ -3,3 +3,5 @@
 addons/godot-firebase/.env
 .vscode/
 ios_plugins/
+android
+export_presets.cfg

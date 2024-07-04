@@ -6,5 +6,5 @@ func _on_log_out_button_pressed():
 
 func _on_play_button_pressed():
 	hide()
-	var MenuBtn = get_parent().get_parent().find_children('MenuButton')[0]
+	var MenuBtn = get_parent().get_parent().find_children('ButtonList')[0]
 	MenuBtn.show()

@@ -10,17 +10,21 @@ var brush_color = Color(1, 1, 1, 0)
 var image: Image
 var texture: ImageTexture
 
+func _ready():
+	set_canvas()
+	$AnimationPlayer.play('default')
+	for screen in scratch_screen.get_children():
+		screen.set_label_text(get_unique_randomize())
+
 func _input(event):
 	if event is InputEventMouseButton:
 		mouse_pressed = event.pressed
 	if event is InputEventMouseMotion&&mouse_pressed:
 		draw_on_canvas(event.position)
 
-func _ready():
-	set_canvas()
-	$AnimationPlayer.play('default')
-	for screen in scratch_screen.get_children():
-		screen.set_label_text(get_unique_randomize())
+func _on_menu_button_pressed():
+	$ButtonList.hide()
+	$MenuPopUp/Menu.show()
 
 func get_unique_randomize():
 	var rand_number = randi_range(1, 300)
@@ -46,7 +50,3 @@ func draw_on_canvas(pos):
 						image.set_pixelv(pixel_pos, brush_color)
 		texture = ImageTexture.create_from_image(image)
 		$PenCanvas.texture = texture
-
-func _on_menu_button_pressed():
-	$MenuButton.hide()
-	$MenuPopUp/Menu.show()
