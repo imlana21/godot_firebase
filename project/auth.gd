@@ -28,9 +28,13 @@ func _on_register_button_pressed():
 
 func on_login_succeeded(auth):
 	if $Form/RuleValidation/CheckBox.button_pressed:
-		print_debug(auth)
 		show_label("Login Success")
 		Firebase.Auth.save_auth(auth)
+		var firestore_collection : FirestoreCollection = Firebase.Firestore.collection('points')
+		var firestore_document = await firestore_collection.get_doc(auth.email)
+		Game.set_player_data(firestore_document)
+		print(Game.player_data)
+		print("Data loaded for user " + auth.email)
 		get_tree().change_scene_to_file("res://project/main.tscn")
 	
 func on_signup_succeeded(auth):

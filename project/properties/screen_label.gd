@@ -22,10 +22,11 @@ func inc_pen_grid_count():
 		if pen_grid_count == 80:
 			Game.player_point += label_value
 			print("Point : " + str(Game.player_point))
+			print(Game.player_data)
 
 func reset():
 	pen_grid_count = 0
-	mouse_clicked = false
+	mouse_clicked = false	
 	label_value = 0
 	for detector in $PenDetector.get_children():
 		detector.panel_clicked = false

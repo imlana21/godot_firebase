@@ -26,6 +26,7 @@ func _input(event) -> void:
 func _on_menu_button_pressed() -> void:
 	$ButtonList.hide()
 	$MenuPopUp/Menu.show()
+	$MenuPopUp/Menu.check_point()
 
 func get_unique_randomize() -> int:
 	var rand_number = randi_range(1, 300)

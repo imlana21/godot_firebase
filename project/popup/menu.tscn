@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.74978, 0.74978, 0.74978, 0.447059)
+color = Color(0.374139, 0.374139, 0.374139, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -30,7 +30,7 @@ offset_top = 232.0
 offset_right = -39.0
 offset_bottom = 538.0
 grow_horizontal = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
@@ -46,5 +46,12 @@ theme = ExtResource("1_kg8p0")
 theme_override_font_sizes/font_size = 100
 text = "Log Out"
 
+[node name="Minus10KButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_kg8p0")
+theme_override_font_sizes/font_size = 100
+text = "-10.000"
+
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/LogOutButton" to="." method="_on_log_out_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Minus10KButton" to="." method="_on_minus_10k_button_pressed"]
