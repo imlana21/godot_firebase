@@ -15,7 +15,11 @@ func _ready() -> void:
 	$ScreenLabel.set_text_number(get_unique_randomize())
 
 func _process(_delta) -> void:
-	$ButtonList/Point.text = 'Point : ' + str(Game.player_point)
+	$ButtonList/Currencies/Point.text = str(Game.player_point)
+	if Game.player_coin > 0:
+		$ButtonList/Currencies/Coin.text = str('%.2f' % Game.player_coin)
+	else:
+		$ButtonList/Currencies/Coin.text = '0'
 
 func _input(event) -> void:
 	if event is InputEventMouseButton:

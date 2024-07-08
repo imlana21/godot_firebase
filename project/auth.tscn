@@ -108,7 +108,7 @@ theme_override_font_sizes/font_size = 14
 text = "Do you agree with the rules that apply to 
 this game?"
 
-[node name="Control" type="Control" parent="Form"]
+[node name="Button" type="Control" parent="Form"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -122,7 +122,7 @@ offset_bottom = 52.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LoginButton" type="Button" parent="Form/Control"]
+[node name="LoginButton" type="Button" parent="Form/Button"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = 8
@@ -138,7 +138,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "    Login    "
 
-[node name="RegisterButton" type="Button" parent="Form/Control"]
+[node name="RegisterButton" type="Button" parent="Form/Button"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 1
 anchors_preset = 8
@@ -167,5 +167,5 @@ theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Form/Control/LoginButton" to="." method="_on_login_button_pressed"]
-[connection signal="pressed" from="Form/Control/RegisterButton" to="." method="_on_register_button_pressed"]
+[connection signal="pressed" from="Form/Button/LoginButton" to="." method="_on_login_button_pressed"]
+[connection signal="pressed" from="Form/Button/RegisterButton" to="." method="_on_register_button_pressed"]

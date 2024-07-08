@@ -50,8 +50,24 @@ text = "Log Out"
 layout_mode = 2
 theme = ExtResource("1_kg8p0")
 theme_override_font_sizes/font_size = 100
-text = "-10.000"
+text = "-10k    Point"
+
+[node name="RandomCoinButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_kg8p0")
+theme_override_font_sizes/font_size = 100
+text = "Random Coin"
+
+[node name="TimeList" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RandomCoin" type="Timer" parent="TimeList"]
+wait_time = 10.0
+one_shot = true
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/LogOutButton" to="." method="_on_log_out_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Minus10KButton" to="." method="_on_minus_10k_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/RandomCoinButton" to="." method="_on_random_coin_button_pressed"]

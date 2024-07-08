@@ -1,5 +1,3 @@
-- Connect each of the points that people collect to the firebase accounts. (ok)
+Create a second currency on the main menu (ok)
 
-- in the firebase when a account is made with a Email make it so on the back end there is a number that starts at 40001 then from there the next register user is 40002 and the next one is 40003 ect et  (???)
-
-- create a button on the home screen that takes away 10000 points but only if they have 10000 points (ok)
+Create a Button with a GUI that pops up that when you click a button in the gui it randomly gives you a number between 0.01 - 0.10 of this new currency with a cool down of 10 minutes (ok)

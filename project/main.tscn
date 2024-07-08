@@ -1,12 +1,21 @@
-[gd_scene load_steps=9 format=3 uid="uid://clldij5tytar4"]
+[gd_scene load_steps=12 format=3 uid="uid://clldij5tytar4"]
 
 [ext_resource type="Script" path="res://project/main.gd" id="1_ymab0"]
-[ext_resource type="Texture2D" uid="uid://cvdqonx3j38yq" path="res://assets/mommy.jpg" id="2_uro56"]
+[ext_resource type="Texture2D" uid="uid://1gwqx8e2vl5v" path="res://assets/currency/coin.png" id="4_03eye"]
 [ext_resource type="PackedScene" uid="uid://1bwpm6v07hqy" path="res://project/properties/screen_label.tscn" id="4_5xpgr"]
 [ext_resource type="PackedScene" uid="uid://chlbq3kflswcq" path="res://project/popup/menu.tscn" id="5_wituo"]
+[ext_resource type="Texture2D" uid="uid://d0gm76t5uto43" path="res://assets/currency/star.png" id="5_yh0g1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pxa8"]
 bg_color = Color(0.633757, 0.633757, 0.633757, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k87na"]
+atlas = ExtResource("4_03eye")
+region = Rect2(1, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlthd"]
+atlas = ExtResource("5_yh0g1")
+region = Rect2(198, 6, 20, 22)
 
 [sub_resource type="Animation" id="Animation_5pr6d"]
 length = 0.001
@@ -125,23 +134,19 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ymab0")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1565.0
-offset_top = -8.0
-offset_right = 1600.0
-offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_uro56")
-expand_mode = 1
+color = Color(0.0177324, 0.0177324, 0.0177324, 1)
 
 [node name="ScreenLabel" parent="." instance=ExtResource("4_5xpgr")]
+visible = false
 layout_mode = 1
 
 [node name="PenCanvas" type="TextureRect" parent="."]
@@ -155,6 +160,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="SplashScreen" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -179,10 +185,33 @@ theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_0pxa8")
 text = "Menu"
 
-[node name="Point" type="Label" parent="ButtonList"]
+[node name="Currencies" type="HBoxContainer" parent="ButtonList"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ButtonList/Currencies"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("AtlasTexture_k87na")
+
+[node name="Coin" type="Label" parent="ButtonList/Currencies"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
-text = "Point : 0"
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="ButtonList/Currencies"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = SubResource("AtlasTexture_jlthd")
+
+[node name="Point" type="Label" parent="ButtonList/Currencies"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
