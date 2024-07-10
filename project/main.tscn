@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://clldij5tytar4"]
+[gd_scene load_steps=14 format=3 uid="uid://clldij5tytar4"]
 
 [ext_resource type="Script" path="res://project/main.gd" id="1_ymab0"]
+[ext_resource type="Texture2D" uid="uid://cvdqonx3j38yq" path="res://assets/mommy.jpg" id="2_npxnc"]
 [ext_resource type="Texture2D" uid="uid://1gwqx8e2vl5v" path="res://assets/currency/coin.png" id="4_03eye"]
 [ext_resource type="PackedScene" uid="uid://1bwpm6v07hqy" path="res://project/properties/screen_label.tscn" id="4_5xpgr"]
 [ext_resource type="PackedScene" uid="uid://chlbq3kflswcq" path="res://project/popup/menu.tscn" id="5_wituo"]
 [ext_resource type="Texture2D" uid="uid://d0gm76t5uto43" path="res://assets/currency/star.png" id="5_yh0g1"]
+[ext_resource type="PackedScene" uid="uid://cwgwkxcfitghp" path="res://project/popup/notification.tscn" id="6_5fmds"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pxa8"]
 bg_color = Color(0.633757, 0.633757, 0.633757, 1)
@@ -22,46 +24,82 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SplashScreen:color")
+tracks/0/path = NodePath("Background:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
+"update": 1,
+"values": [false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Background:visible")
+tracks/1/path = NodePath("ScreenLabel:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("PenCanvas:visible")
+tracks/2/path = NodePath("ScreenLabel:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [false]
+"values": [true]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("ButtonList:visible")
+tracks/3/path = NodePath("PenCanvas:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SplashScreen:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SplashScreen:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ButtonList:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -73,31 +111,31 @@ resource_name = "default"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SplashScreen:color")
+tracks/0/path = NodePath("Background:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Background:visible")
+tracks/1/path = NodePath("ScreenLabel:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("PenCanvas:visible")
+tracks/2/path = NodePath("ScreenLabel:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -109,11 +147,47 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("ButtonList:visible")
+tracks/3/path = NodePath("PenCanvas:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.7),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SplashScreen:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SplashScreen:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.3, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ButtonList:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -134,7 +208,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ymab0")
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -143,10 +217,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.0177324, 0.0177324, 0.0177324, 1)
+texture = ExtResource("2_npxnc")
 
 [node name="ScreenLabel" parent="." instance=ExtResource("4_5xpgr")]
-visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 
 [node name="PenCanvas" type="TextureRect" parent="."]
@@ -160,7 +234,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="SplashScreen" type="ColorRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -223,6 +296,10 @@ libraries = {
 [node name="MenuPopUp" type="CanvasLayer" parent="."]
 
 [node name="Menu" parent="MenuPopUp" instance=ExtResource("5_wituo")]
+visible = false
+mouse_filter = 2
+
+[node name="Notification" parent="MenuPopUp" instance=ExtResource("6_5fmds")]
 visible = false
 
 [connection signal="pressed" from="ButtonList/MenuButton" to="." method="_on_menu_button_pressed"]

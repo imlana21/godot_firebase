@@ -33,9 +33,13 @@ func check_point() -> void:
 		$VBoxContainer/Minus10KButton.disabled = true
 
 func _on_random_coin_button_pressed() -> void:
-	Game.player_coin += randf_range(0.01, 0.10)
-	_on_play_button_pressed()
+	# _on_play_button_pressed()
+	var reward: float = randf_range(0.0, 0.1)
+	var notif: Control = get_parent().find_children('Notification')[0]
+	Game.player_coin += reward
+	notif.set_reward(reward)
 	$TimeList/RandomCoin.start()
+
 
 func seconds_to_minutes(time_sec) -> String:
 	var minutes = floor(time_sec / 60)
