@@ -3,7 +3,7 @@ extends Control
 var mouse_pressed: bool = false
 var curr_line: Line2D
 var registered_number: Array = []
-var brush_size: int = 15
+var brush_size: int = 10
 var brush_color: Color = Color(1, 1, 1, 0)
 var image: Image
 var texture: ImageTexture
@@ -12,14 +12,7 @@ func _ready() -> void:
 	init_canvas()
 	$AnimationPlayer.play('default')
 	$ScreenLabel.reset()
-	$ScreenLabel.set_text_number(get_unique_randomize())
-
-func _process(_delta) -> void:
-	$ButtonList/Currencies/Point.text = str(Game.player_point)
-	if Game.player_coin > 0:
-		$ButtonList/Currencies/Coin.text = str('%.2f' % Game.player_coin)
-	else:
-		$ButtonList/Currencies/Coin.text = '0'
+	$ScreenLabel.set_text_number(randi_range(1, 300))
 
 func _input(event) -> void:
 	if event is InputEventMouseButton:
@@ -31,13 +24,6 @@ func _on_menu_button_pressed() -> void:
 	$ButtonList.hide()
 	$MenuPopUp/Menu.show()
 	$MenuPopUp/Menu.check_point()
-
-func get_unique_randomize() -> int:
-	var rand_number = randi_range(1, 300)
-	while rand_number in registered_number:
-		rand_number = randi_range(1, 300)
-	registered_number.append(rand_number)
-	return rand_number
 
 func init_canvas() -> void:
 	image = Image.create(int(get_viewport_rect().size.x), int(get_viewport_rect().size.y), false, Image.FORMAT_RGBA8)

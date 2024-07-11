@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://chlbq3kflswcq"]
+[gd_scene load_steps=6 format=3 uid="uid://chlbq3kflswcq"]
 
 [ext_resource type="Theme" uid="uid://cyryjcs8wh6fi" path="res://project/popup/popup.tres" id="1_kg8p0"]
 [ext_resource type="Script" path="res://project/popup/menu.gd" id="1_n5hlv"]
+[ext_resource type="PackedScene" uid="uid://b1y0ncjjxywn0" path="res://project/popup/currencies.tscn" id="3_5f6im"]
+[ext_resource type="PackedScene" uid="uid://cxulomjg4nd6x" path="res://project/popup/level.tscn" id="3_cn01p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oddep"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,6 +14,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 3
+mouse_filter = 2
 script = ExtResource("1_n5hlv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -19,55 +25,188 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.374139, 0.374139, 0.374139, 1)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+color = Color(0.286275, 0.541176, 0.298039, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="MenuList" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
-offset_left = 49.0
-offset_top = 232.0
-offset_right = -39.0
-offset_bottom = 538.0
+anchor_bottom = 1.0
 grow_horizontal = 2
-theme_override_constants/separation = 30
-alignment = 1
+grow_vertical = 2
+mouse_filter = 2
 
-[node name="PlayButton" type="Button" parent="VBoxContainer"]
+[node name="Currencies" parent="MenuList" instance=ExtResource("3_5f6im")]
 layout_mode = 2
+mouse_filter = 2
+
+[node name="Level" parent="MenuList" instance=ExtResource("3_cn01p")]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="PlayButton" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 7.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -614.0
+offset_top = -925.0
+offset_right = 614.0
+offset_bottom = -126.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PlayButton" type="Button" parent="PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -494.5
+offset_top = -184.5
+offset_right = -209.5
+offset_bottom = -39.5
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_kg8p0")
-theme_override_font_sizes/font_size = 100
 text = "Play"
+icon = SubResource("AtlasTexture_oddep")
 
-[node name="LogOutButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="LogOutButton" type="Button" parent="PlayButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 61.0
+offset_top = -184.5
+offset_right = 483.0
+offset_bottom = -39.5
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("1_kg8p0")
 theme_override_font_sizes/font_size = 100
 text = "Log Out"
 
-[node name="Minus10KButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("1_kg8p0")
-theme_override_font_sizes/font_size = 100
-text = "-10k    Point"
+[node name="Bottom" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -640.0
+offset_right = 1080.0
+offset_bottom = 1920.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
 
-[node name="RandomCoinButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="ColorRect" type="ColorRect" parent="Bottom"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -609.0
+offset_top = -1140.0
+offset_right = -71.0
+offset_bottom = -290.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Minus10KButton" type="Button" parent="Bottom"]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 2193.0
+offset_right = 562.0
+offset_bottom = 2338.0
+mouse_default_cursor_shape = 2
 theme = ExtResource("1_kg8p0")
 theme_override_font_sizes/font_size = 100
-text = "Random Coin"
+text = "-10k P"
+
+[node name="RandomCoinTimer" type="Label" parent="Bottom"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 2346.0
+offset_right = 561.0
+offset_bottom = 2369.0
+theme_override_font_sizes/font_size = 0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="Bottom"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = -1145.0
+offset_right = 591.0
+offset_bottom = -295.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RandomCoinButton" type="Button" parent="Bottom"]
+layout_mode = 0
+offset_left = 870.0
+offset_top = 2186.0
+offset_right = 1226.0
+offset_bottom = 2331.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_kg8p0")
+theme_override_font_sizes/font_size = 100
+text = "+ Coin"
 
 [node name="TimeList" type="Control" parent="."]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="RandomCoin" type="Timer" parent="TimeList"]
 wait_time = 10.0
 one_shot = true
 
-[connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/LogOutButton" to="." method="_on_log_out_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Minus10KButton" to="." method="_on_minus_10k_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/RandomCoinButton" to="." method="_on_random_coin_button_pressed"]
+[connection signal="pressed" from="PlayButton/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="PlayButton/LogOutButton" to="." method="_on_log_out_button_pressed"]
+[connection signal="pressed" from="Bottom/Minus10KButton" to="." method="_on_minus_10k_button_pressed"]
+[connection signal="pressed" from="Bottom/RandomCoinButton" to="." method="_on_random_coin_button_pressed"]

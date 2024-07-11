@@ -13,6 +13,7 @@ config_version=5
 config/name="godot_firebase"
 run/main_scene="res://project/auth.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/fullsize=false
 config/icon="res://icon.svg"
 
 [autoload]
@@ -22,9 +23,10 @@ Game="*res://autoload/main.gd"
 
 [display]
 
-window/size/viewport_width=1440
-window/size/viewport_height=2560
-window/stretch/aspect="ignore"
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/size/resizable=false
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
@@ -32,6 +34,5 @@ enabled=PackedStringArray("res://addons/godot-firebase/plugin.cfg")
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"
+renderer/rendering_method="mobile"
 textures/vram_compression/import_etc2_astc=true

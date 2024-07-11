@@ -1,5 +1,7 @@
-For the button for the random coin make a pop up that has a close button, on the pop-up (ok)
+Make the main menu look like this. 
 
-Put the amount of the ‘new coin’ the amount on the pop up (ok)
+![Menu](https://media.discordapp.net/attachments/1174855464287215710/1260383866544324679/Untitled.png?ex=668f1f72&is=668dcdf2&hm=ca610095fc4aec3fafd7328b26c7871972a9455617899218c998cf052963c766&=&format=webp&quality=lossless&width=394&height=700)
 
-Change the amount the people get from 0.0000 to 0.1000 (ok)
+Create some sort basic leveling system that shows up under the currency.
+
+1440 * 2560

@@ -1,23 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://clldij5tytar4"]
+[gd_scene load_steps=12 format=3 uid="uid://clldij5tytar4"]
 
 [ext_resource type="Script" path="res://project/main.gd" id="1_ymab0"]
 [ext_resource type="Texture2D" uid="uid://cvdqonx3j38yq" path="res://assets/mommy.jpg" id="2_npxnc"]
-[ext_resource type="Texture2D" uid="uid://1gwqx8e2vl5v" path="res://assets/currency/coin.png" id="4_03eye"]
 [ext_resource type="PackedScene" uid="uid://1bwpm6v07hqy" path="res://project/properties/screen_label.tscn" id="4_5xpgr"]
+[ext_resource type="PackedScene" uid="uid://b1y0ncjjxywn0" path="res://project/popup/currencies.tscn" id="4_mmdyd"]
+[ext_resource type="PackedScene" uid="uid://cxulomjg4nd6x" path="res://project/popup/level.tscn" id="5_0s8jw"]
 [ext_resource type="PackedScene" uid="uid://chlbq3kflswcq" path="res://project/popup/menu.tscn" id="5_wituo"]
-[ext_resource type="Texture2D" uid="uid://d0gm76t5uto43" path="res://assets/currency/star.png" id="5_yh0g1"]
 [ext_resource type="PackedScene" uid="uid://cwgwkxcfitghp" path="res://project/popup/notification.tscn" id="6_5fmds"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pxa8"]
 bg_color = Color(0.633757, 0.633757, 0.633757, 1)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k87na"]
-atlas = ExtResource("4_03eye")
-region = Rect2(1, 0, 14, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jlthd"]
-atlas = ExtResource("5_yh0g1")
-region = Rect2(198, 6, 20, 22)
 
 [sub_resource type="Animation" id="Animation_5pr6d"]
 length = 0.001
@@ -115,7 +107,7 @@ tracks/0/path = NodePath("Background:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -211,17 +203,25 @@ script = ExtResource("1_ymab0")
 [node name="Background" type="TextureRect" parent="."]
 visible = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1099.0
+offset_top = -640.0
+offset_right = 2711.0
+offset_bottom = 1492.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.6, 0.6)
 mouse_filter = 2
 texture = ExtResource("2_npxnc")
 
 [node name="ScreenLabel" parent="." instance=ExtResource("4_5xpgr")]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
+scale = Vector2(0.5, 0.5)
 
 [node name="PenCanvas" type="TextureRect" parent="."]
 visible = false
@@ -249,44 +249,25 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 210.0
 grow_horizontal = 2
+mouse_filter = 2
 
 [node name="MenuButton" type="Button" parent="ButtonList"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+mouse_filter = 1
+mouse_default_cursor_shape = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_0pxa8")
 text = "Menu"
 
-[node name="Currencies" type="HBoxContainer" parent="ButtonList"]
+[node name="Currencies" parent="ButtonList" instance=ExtResource("4_mmdyd")]
 layout_mode = 2
-theme_override_constants/separation = 10
-alignment = 1
+mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="ButtonList/Currencies"]
-custom_minimum_size = Vector2(60, 60)
+[node name="Level" parent="ButtonList" instance=ExtResource("5_0s8jw")]
 layout_mode = 2
-size_flags_horizontal = 4
-texture = SubResource("AtlasTexture_k87na")
-
-[node name="Coin" type="Label" parent="ButtonList/Currencies"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect2" type="TextureRect" parent="ButtonList/Currencies"]
-custom_minimum_size = Vector2(60, 60)
-layout_mode = 2
-texture = SubResource("AtlasTexture_jlthd")
-
-[node name="Point" type="Label" parent="ButtonList/Currencies"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
+mouse_filter = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -297,9 +278,14 @@ libraries = {
 
 [node name="Menu" parent="MenuPopUp" instance=ExtResource("5_wituo")]
 visible = false
-mouse_filter = 2
 
 [node name="Notification" parent="MenuPopUp" instance=ExtResource("6_5fmds")]
 visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+scale = Vector2(0.5, 0.5)
 
 [connection signal="pressed" from="ButtonList/MenuButton" to="." method="_on_menu_button_pressed"]
