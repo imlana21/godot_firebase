@@ -32,11 +32,10 @@ color = Color(0.286275, 0.541176, 0.298039, 1)
 
 [node name="MenuList" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
+offset_bottom = 168.0
 grow_horizontal = 2
-grow_vertical = 2
 mouse_filter = 2
 
 [node name="Currencies" parent="MenuList" instance=ExtResource("3_5f6im")]
@@ -58,10 +57,9 @@ offset_top = 7.0
 offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.5, 0.5)
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="PlayButton"]
+[node name="ColorRect" type="PanelContainer" parent="PlayButton"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -75,7 +73,7 @@ offset_bottom = -126.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 1)
+theme = ExtResource("1_kg8p0")
 
 [node name="PlayButton" type="Button" parent="PlayButton"]
 layout_mode = 1
@@ -84,51 +82,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -494.5
-offset_top = -184.5
-offset_right = -209.5
-offset_bottom = -39.5
+offset_left = -307.0
+offset_top = -251.0
+offset_right = 318.0
+offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_kg8p0")
+theme_override_font_sizes/font_size = 150
 text = "Play"
 icon = SubResource("AtlasTexture_oddep")
 
-[node name="LogOutButton" type="Button" parent="PlayButton"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 61.0
-offset_top = -184.5
-offset_right = 483.0
-offset_bottom = -39.5
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("1_kg8p0")
-theme_override_font_sizes/font_size = 100
-text = "Log Out"
-
 [node name="Bottom" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -360.0
-offset_top = -640.0
-offset_right = 1080.0
-offset_bottom = 1920.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.5, 0.5)
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="Bottom"]
+[node name="ColorRect" type="PanelContainer" parent="Bottom"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -142,31 +117,54 @@ offset_bottom = -290.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
-color = Color(0, 0, 0, 1)
+theme = ExtResource("1_kg8p0")
+
+[node name="LogOutButton" type="Button" parent="Bottom"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -526.0
+offset_top = 880.5
+offset_right = -104.0
+offset_bottom = 1025.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+theme = ExtResource("1_kg8p0")
+theme_override_font_sizes/font_size = 100
+text = "Log Out"
 
 [node name="Minus10KButton" type="Button" parent="Bottom"]
+visible = false
 layout_mode = 0
 offset_left = 206.0
-offset_top = 2193.0
+offset_top = 1553.0
 offset_right = 562.0
-offset_bottom = 2338.0
+offset_bottom = 1698.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("1_kg8p0")
 theme_override_font_sizes/font_size = 100
+disabled = true
 text = "-10k P"
 
 [node name="RandomCoinTimer" type="Label" parent="Bottom"]
+visible = false
 layout_mode = 0
-offset_left = 213.0
-offset_top = 2346.0
-offset_right = 561.0
-offset_bottom = 2369.0
-theme_override_font_sizes/font_size = 0
-text = "100"
+offset_left = 183.0
+offset_top = 2367.0
+offset_right = 604.0
+offset_bottom = 2435.0
+theme = ExtResource("1_kg8p0")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "00:00 Time Left"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect2" type="ColorRect" parent="Bottom"]
+[node name="ColorRect2" type="PanelContainer" parent="Bottom"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -180,14 +178,15 @@ offset_bottom = -295.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
-color = Color(0, 0, 0, 1)
+theme = ExtResource("1_kg8p0")
 
 [node name="RandomCoinButton" type="Button" parent="Bottom"]
 layout_mode = 0
-offset_left = 870.0
-offset_top = 2186.0
-offset_right = 1226.0
-offset_bottom = 2331.0
+offset_left = 886.0
+offset_top = 2159.0
+offset_right = 1242.0
+offset_bottom = 2304.0
+scale = Vector2(0.9, 0.9)
 mouse_default_cursor_shape = 2
 theme = ExtResource("1_kg8p0")
 theme_override_font_sizes/font_size = 100
@@ -195,9 +194,11 @@ text = "+ Coin"
 
 [node name="TimeList" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -207,6 +208,6 @@ wait_time = 10.0
 one_shot = true
 
 [connection signal="pressed" from="PlayButton/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="PlayButton/LogOutButton" to="." method="_on_log_out_button_pressed"]
+[connection signal="pressed" from="Bottom/LogOutButton" to="." method="_on_log_out_button_pressed"]
 [connection signal="pressed" from="Bottom/Minus10KButton" to="." method="_on_minus_10k_button_pressed"]
 [connection signal="pressed" from="Bottom/RandomCoinButton" to="." method="_on_random_coin_button_pressed"]

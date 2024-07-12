@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpmwn5wxr8ex0"]
+[gd_scene load_steps=3 format=3 uid="uid://cpmwn5wxr8ex0"]
 
 [ext_resource type="Script" path="res://project/auth.gd" id="1_la8ry"]
+[ext_resource type="Theme" uid="uid://cyryjcs8wh6fi" path="res://project/popup/popup.tres" id="2_maqqi"]
 
 [node name="Auth" type="Control"]
 layout_mode = 3
@@ -22,15 +23,9 @@ color = Color(0.212305, 0.212305, 0.212305, 1)
 
 [node name="Form" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -216.5
-offset_top = -226.0
-offset_right = 216.5
-offset_bottom = 226.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -41,21 +36,24 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -164.5
-offset_top = -153.5
-offset_right = 164.5
-offset_bottom = -86.5
+offset_left = -483.0
+offset_top = -267.0
+offset_right = 483.0
+offset_bottom = -116.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="Form/Email"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "Email"
 
 [node name="Input" type="TextEdit" parent="Form/Email"]
 custom_minimum_size = Vector2(20, 40)
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
 placeholder_text = "Your Email"
 
 [node name="Password" type="VBoxContainer" parent="Form"]
@@ -65,22 +63,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -164.5
-offset_top = -65.5
-offset_right = 164.5
-offset_bottom = 1.5
+offset_left = -483.0
+offset_top = -67.5
+offset_right = 483.0
+offset_bottom = 83.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="Form/Password"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
 text = "Password
 "
 
 [node name="Input" type="LineEdit" parent="Form/Password"]
 custom_minimum_size = Vector2(20, 40)
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
 placeholder_text = "Your Password"
 secret = true
 
@@ -91,22 +92,22 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -163.5
-offset_top = 16.0
-offset_right = 164.5
-offset_bottom = 65.0
+offset_left = -325.5
+offset_top = 116.5
+offset_right = 325.5
+offset_bottom = 187.5
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CheckBox" type="CheckBox" parent="Form/RuleValidation"]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_constants/h_separation = 20
+theme_override_font_sizes/font_size = 24
 action_mode = 0
-
-[node name="Label" type="Label" parent="Form/RuleValidation"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 14
-text = "Do you agree with the rules that apply to 
-this game?"
+text = "Do you agree with the rules that apply to  this game?"
+alignment = 1
 
 [node name="Button" type="Control" parent="Form"]
 layout_mode = 1
@@ -116,9 +117,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -20.0
-offset_top = 12.0
+offset_top = 156.0
 offset_right = 20.0
-offset_bottom = 52.0
+offset_bottom = 196.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -130,12 +131,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -154.0
-offset_top = 47.0
-offset_right = -70.0
-offset_bottom = 97.0
+offset_left = -272.0
+offset_top = 40.0
+offset_right = -80.0
+offset_bottom = 130.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_maqqi")
+theme_override_font_sizes/font_size = 40
 text = "    Login    "
 
 [node name="RegisterButton" type="Button" parent="Form/Button"]
@@ -146,12 +149,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 56.0
-offset_top = 47.0
-offset_right = 152.0
-offset_bottom = 97.0
+offset_left = 85.0
+offset_top = 40.0
+offset_right = 315.0
+offset_bottom = 130.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_maqqi")
+theme_override_font_sizes/font_size = 40
 text = "   Register   "
 
 [node name="Label" type="Label" parent="Form"]

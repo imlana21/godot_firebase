@@ -1,5 +1,12 @@
 extends Control
 
+func _ready():
+	var style_box = StyleBoxFlat.new()
+
+	style_box.set_corner_radius_all(20)
+	style_box.border_color = Color(0, 0, 0)
+	add_theme_stylebox_override('ColorRect', style_box)
+
 func _process(_delta) -> void:
 	check_point()
 	if $TimeList/RandomCoin.is_stopped():
