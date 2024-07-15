@@ -22,8 +22,7 @@ func _input(event) -> void:
 
 func _on_menu_button_pressed() -> void:
 	$ButtonList.hide()
-	$MenuPopUp/Menu.show()
-	$MenuPopUp/Menu.check_point()
+	$MenuPopUp/Menu.show_popup()
 
 func init_canvas() -> void:
 	image = Image.create(int(get_viewport_rect().size.x), int(get_viewport_rect().size.y), false, Image.FORMAT_RGBA8)

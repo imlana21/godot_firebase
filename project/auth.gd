@@ -38,7 +38,7 @@ func on_login_succeeded(auth):
 		var firestore_document = await firestore_collection.get_doc(auth.email)
 		Game.set_player_data(firestore_document)
 		print("Data loaded for user " + auth.email)
-		get_tree().change_scene_to_file("res://project/main.tscn")
+		get_tree().change_scene_to_file("res://project/popup/menu.tscn")
 	
 func on_signup_succeeded(auth):
 	print_debug(auth)

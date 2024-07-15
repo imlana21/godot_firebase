@@ -1,11 +1,6 @@
 extends Control
 
-func _ready():
-	var style_box = StyleBoxFlat.new()
-
-	style_box.set_corner_radius_all(20)
-	style_box.border_color = Color(0, 0, 0)
-	add_theme_stylebox_override('ColorRect', style_box)
+var is_popup: bool = false
 
 func _process(_delta) -> void:
 	check_point()
@@ -17,13 +12,20 @@ func _process(_delta) -> void:
 		$Bottom/Minus10KButton.disabled = true
 
 func _on_play_button_pressed() -> void:
-	hide()
-	var MenuBtn = get_parent().get_parent().find_children('ButtonList')[0]
-	MenuBtn.show()
+	if is_popup:
+		hide()
+		var MenuBtn = get_parent().get_parent().find_children('ButtonList')[0]
+		MenuBtn.show()
+	else:
+		get_tree().change_scene_to_file("res://project/main.tscn")
 
 func _on_minus_10k_button_pressed() -> void:
 	Game.player_data.point -= 10000
 	Game.update_database()
+
+func show_popup() -> void:
+	show()
+	is_popup = true
 
 func check_point() -> void:
 	if Game.player_data.point >= 10000:
