@@ -119,35 +119,15 @@ grow_vertical = 0
 mouse_filter = 2
 theme = ExtResource("1_kg8p0")
 
-[node name="LogOutButton" type="Button" parent="Bottom"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -526.0
-offset_top = 880.5
-offset_right = -104.0
-offset_bottom = 1025.5
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.9, 0.9)
-theme = ExtResource("1_kg8p0")
-theme_override_font_sizes/font_size = 100
-text = "Log Out"
-
 [node name="Minus10KButton" type="Button" parent="Bottom"]
-visible = false
 layout_mode = 0
 offset_left = 206.0
-offset_top = 1553.0
+offset_top = 2151.0
 offset_right = 562.0
-offset_bottom = 1698.0
+offset_bottom = 2296.0
 mouse_default_cursor_shape = 2
 theme = ExtResource("1_kg8p0")
 theme_override_font_sizes/font_size = 100
-disabled = true
 text = "-10k P"
 
 [node name="RandomCoinTimer" type="Label" parent="Bottom"]
@@ -208,6 +188,5 @@ wait_time = 10.0
 one_shot = true
 
 [connection signal="pressed" from="PlayButton/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Bottom/LogOutButton" to="." method="_on_log_out_button_pressed"]
 [connection signal="pressed" from="Bottom/Minus10KButton" to="." method="_on_minus_10k_button_pressed"]
 [connection signal="pressed" from="Bottom/RandomCoinButton" to="." method="_on_random_coin_button_pressed"]

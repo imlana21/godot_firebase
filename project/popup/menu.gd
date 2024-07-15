@@ -16,10 +16,6 @@ func _process(_delta) -> void:
 		$Bottom/RandomCoinTimer.text = seconds_to_minutes($TimeList/RandomCoin.time_left) + ' Time Left'
 		$Bottom/Minus10KButton.disabled = true
 
-func _on_log_out_button_pressed() -> void:
-	Firebase.Auth.logout()
-	get_tree().change_scene_to_file("res://project/auth.tscn")	
-
 func _on_play_button_pressed() -> void:
 	hide()
 	var MenuBtn = get_parent().get_parent().find_children('ButtonList')[0]

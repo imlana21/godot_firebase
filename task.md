@@ -1,7 +1,5 @@
-Make the main menu look like this. 
+At the top of the screen next to the coin put a settings button ( a Gear ) that in which you can Logout from.  (ok)
 
-![Menu](https://media.discordapp.net/attachments/1174855464287215710/1260383866544324679/Untitled.png?ex=668f1f72&is=668dcdf2&hm=ca610095fc4aec3fafd7328b26c7871972a9455617899218c998cf052963c766&=&format=webp&quality=lossless&width=394&height=700)
+Make the current "Logout button"  a pop up gui that can be closed. (ok)
 
-Create some sort basic leveling system that shows up under the currency.
-
-1440 * 2560
+Make it so there is a sexond "main screen" that you can flip between the current main screen and the new main screen just by clicking'. (ok)

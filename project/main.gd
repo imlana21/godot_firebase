@@ -42,3 +42,6 @@ func draw_on_canvas(pos: Vector2i) -> void:
 						image.set_pixelv(pixel_pos, brush_color)
 		texture = ImageTexture.create_from_image(image)
 		$PenCanvas.texture = texture
+
+func _on_currencies_btn_setting_pressed():
+	$MenuPopUp/Setting.show_setting()

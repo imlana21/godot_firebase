@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://clldij5tytar4"]
+[gd_scene load_steps=13 format=3 uid="uid://clldij5tytar4"]
 
 [ext_resource type="Script" path="res://project/main.gd" id="1_ymab0"]
 [ext_resource type="Texture2D" uid="uid://cvdqonx3j38yq" path="res://assets/mommy.jpg" id="2_npxnc"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cxulomjg4nd6x" path="res://project/popup/level.tscn" id="5_0s8jw"]
 [ext_resource type="PackedScene" uid="uid://chlbq3kflswcq" path="res://project/popup/menu.tscn" id="5_wituo"]
 [ext_resource type="PackedScene" uid="uid://cwgwkxcfitghp" path="res://project/popup/notification.tscn" id="6_5fmds"]
+[ext_resource type="PackedScene" uid="uid://du103jf4vx4ky" path="res://project/popup/setting.tscn" id="8_cdjux"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pxa8"]
 bg_color = Color(0.633757, 0.633757, 0.633757, 1)
@@ -288,4 +289,11 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 scale = Vector2(0.5, 0.5)
 
+[node name="Setting" parent="MenuPopUp" instance=ExtResource("8_cdjux")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
 [connection signal="pressed" from="ButtonList/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="btn_setting_pressed" from="ButtonList/Currencies" to="." method="_on_currencies_btn_setting_pressed"]
