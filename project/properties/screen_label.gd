@@ -35,6 +35,7 @@ var fruit_list: Array = [
 		'percent': 25
 	},
 ]
+var max_pen_grind: int = 0
 
 func _input(event: InputEvent):
 	if event is InputEventMouseButton and !Game.prevent_mouse:
@@ -42,6 +43,7 @@ func _input(event: InputEvent):
 
 func _ready():
 	pen_grid_count = 0
+	max_pen_grind = round($PenDetector.get_child_count() * 0.6)
 	var menu_popup = get_parent().find_child('MenuPopUp')
 	if menu_popup:
 		menu_popup.find_child('Notification').connect('notif_closed', set_label)
@@ -51,13 +53,16 @@ func _ready():
 func inc_pen_grid_count():
 	if mouse_clicked and !Game.prevent_mouse:
 		pen_grid_count += 1
-		if pen_grid_count == 70:
+		if pen_grid_count == max_pen_grind:
 			if Game.level_up(label_value):
 				Game.prevent_mouse = true
-				print_debug("Level Up")
+				get_parent().clear_canvas()
+				await get_tree().create_timer(2).timeout
 				get_parent().find_child('MenuPopUp').find_child('Notification').set_reward(Game.player_data.level, 'Level Up', '+' + str(label_value), false)
 			else:
 				Game.prevent_mouse = true
+				get_parent().clear_canvas()
+				await get_tree().create_timer(2).timeout
 				get_parent().find_child('MenuPopUp').find_child('Notification').set_reward(Game.player_data.level, '', '+' + str(label_value), false)
 
 func reset():
@@ -71,17 +76,9 @@ func reset():
 func set_label():
 	reset()
 	var random_fruit = get_random_name()
-	print(random_fruit)
-	# get_parent().init_canvas()
+	get_parent().init_canvas()
 	$TextureRect.texture = load('res://assets/img/fruit/' + random_fruit.name + '.png')
 	label_value = randi_range(random_fruit.start_range, random_fruit.end_range)
-
-func randomize_fruit_by_weight() -> Dictionary:
-	# var total_percent = 0
-	# for fruit in fruit_list:
-	# 	total_percent += fruit.percent
-	var random = randi_range(0, fruit_list.size() - 1)
-	return fruit_list[random]
 
 func get_random_name() -> Dictionary:
 	var total_percent = 0

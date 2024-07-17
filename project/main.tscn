@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://clldij5tytar4"]
+[gd_scene load_steps=13 format=3 uid="uid://clldij5tytar4"]
 
 [ext_resource type="Script" path="res://project/main.gd" id="1_ymab0"]
 [ext_resource type="PackedScene" uid="uid://1bwpm6v07hqy" path="res://project/properties/screen_label.tscn" id="4_5xpgr"]
-[ext_resource type="PackedScene" uid="uid://b1y0ncjjxywn0" path="res://project/popup/currencies.tscn" id="4_mmdyd"]
-[ext_resource type="PackedScene" uid="uid://cxulomjg4nd6x" path="res://project/popup/level.tscn" id="5_0s8jw"]
-[ext_resource type="PackedScene" uid="uid://chlbq3kflswcq" path="res://project/popup/menu.tscn" id="5_wituo"]
-[ext_resource type="PackedScene" uid="uid://cwgwkxcfitghp" path="res://project/popup/notification.tscn" id="6_5fmds"]
-[ext_resource type="PackedScene" uid="uid://du103jf4vx4ky" path="res://project/popup/setting.tscn" id="8_cdjux"]
+[ext_resource type="PackedScene" uid="uid://b1y0ncjjxywn0" path="res://project/popup/_component/currencies.tscn" id="4_mmdyd"]
+[ext_resource type="PackedScene" uid="uid://cxulomjg4nd6x" path="res://project/popup/_component/level.tscn" id="5_0s8jw"]
+[ext_resource type="PackedScene" uid="uid://chlbq3kflswcq" path="res://project/popup/main_menu/menu.tscn" id="5_wituo"]
+[ext_resource type="PackedScene" uid="uid://cwgwkxcfitghp" path="res://project/popup/_component/notification.tscn" id="6_5fmds"]
+[ext_resource type="PackedScene" uid="uid://ca16entbsidfp" path="res://project/popup/second_menu/menu.tscn" id="8_8dhdr"]
+[ext_resource type="PackedScene" uid="uid://du103jf4vx4ky" path="res://project/popup/setting/setting.tscn" id="8_cdjux"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pxa8"]
 bg_color = Color(0.633757, 0.633757, 0.633757, 1)
@@ -223,10 +224,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -400.0
-offset_right = 400.0
-offset_bottom = 400.0
+offset_left = -600.0
+offset_top = -600.0
+offset_right = 600.0
+offset_bottom = 600.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -287,10 +288,9 @@ anchor_bottom = 0.5
 scale = Vector2(0.5, 0.5)
 
 [node name="Setting" parent="MenuPopUp" instance=ExtResource("8_cdjux")]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 0.0
-offset_bottom = 0.0
+
+[node name="SecondMenu" parent="MenuPopUp" instance=ExtResource("8_8dhdr")]
+visible = false
 
 [connection signal="pressed" from="ButtonList/MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="btn_setting_pressed" from="ButtonList/Currencies" to="." method="_on_currencies_btn_setting_pressed"]

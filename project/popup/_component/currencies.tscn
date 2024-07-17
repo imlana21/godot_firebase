@@ -1,0 +1,101 @@
+[gd_scene load_steps=12 format=3 uid="uid://b1y0ncjjxywn0"]
+
+[ext_resource type="Texture2D" uid="uid://1gwqx8e2vl5v" path="res://assets/currency/coin.png" id="1_tur54"]
+[ext_resource type="Script" path="res://project/popup/_component/currencies.gd" id="1_y0bke"]
+[ext_resource type="Texture2D" uid="uid://d0gm76t5uto43" path="res://assets/currency/star.png" id="2_em4hh"]
+[ext_resource type="Texture2D" uid="uid://dxqin235yyo2k" path="res://assets/img/icon/white icons.png" id="4_r1ara"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkysp"]
+atlas = ExtResource("1_tur54")
+region = Rect2(1, 0, 14, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roerj"]
+atlas = ExtResource("2_em4hh")
+region = Rect2(198, 6, 20, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq05e"]
+atlas = ExtResource("4_r1ara")
+region = Rect2(50, 2, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilnns"]
+atlas = ExtResource("4_r1ara")
+region = Rect2(50, 2, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4asid"]
+atlas = ExtResource("4_r1ara")
+region = Rect2(50, 2, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8qr1"]
+atlas = ExtResource("4_r1ara")
+region = Rect2(50, 2, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj3fi"]
+atlas = ExtResource("4_r1ara")
+region = Rect2(50, 2, 12, 12)
+
+[node name="Currencies" type="HBoxContainer"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.027
+offset_bottom = -0.120003
+grow_horizontal = 2
+script = ExtResource("1_y0bke")
+
+[node name="Coin" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Coin"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = SubResource("AtlasTexture_rkysp")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Coin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = -10
+
+[node name="Poin" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Poin"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = SubResource("AtlasTexture_roerj")
+expand_mode = 3
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Poin"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Setting" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 2
+
+[node name="TextureButton" type="TextureButton" parent="Setting"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_sq05e")
+texture_pressed = SubResource("AtlasTexture_ilnns")
+texture_hover = SubResource("AtlasTexture_4asid")
+texture_disabled = SubResource("AtlasTexture_q8qr1")
+texture_focused = SubResource("AtlasTexture_jj3fi")
+stretch_mode = 5
+
+[connection signal="pressed" from="Setting/TextureButton" to="." method="_on_texture_button_pressed"]

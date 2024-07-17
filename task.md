@@ -1,7 +1,5 @@
-Make it so the ‘scratch area’ is a square (ok)
+Make the scratch area bigger ( about 50% bigger ) (ok)
 
-instead of numbers that show up make it fruits ( for now ) that represents a amount of points.
+make it so if the item is scratched over 85% it automatically solves the scratch and gives the coins (ok)
 
-( Apple = 1-100, Orange = 100-200, Watermelon- 200 - 300, Lime = 300 - 400, and strawberry = 400 - 500 ) 
-
-in the back ( in the code ) make a section where you can edit the percentage of each fruit showing up.
+make a ‘second’ main menu that’s able to be viewed by a button on the main menu and in the second main menu put a button that makes the player look at the main menu

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxulomjg4nd6x"]
+
+[ext_resource type="Script" path="res://project/popup/_component/level.gd" id="1_hflgm"]
+[ext_resource type="Theme" uid="uid://cyryjcs8wh6fi" path="res://project/popup/popup.tres" id="1_rs2nq"]
+
+[node name="Level" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 28.0
+grow_horizontal = 2
+alignment = 1
+script = ExtResource("1_hflgm")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+theme = ExtResource("1_rs2nq")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 60
+text = "Level : 0"

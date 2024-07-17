@@ -23,12 +23,15 @@ func _on_menu_button_pressed() -> void:
 	$ButtonList.hide()
 	$MenuPopUp/Menu.show_popup()
 
-func init_canvas() -> void:
-	# image = Image.create(int(get_viewport_rect().size.x), int(get_viewport_rect().size.y), false, Image.FORMAT_RGBA8)
+func init_canvas(with_color: Color = Color(0, 0, 0, 1)) -> void:
+	# default color is black
 	image = Image.create(int($PenCanvas.size.x), int($PenCanvas.size.y), false, Image.FORMAT_RGBA8)
-	image.fill(Color('000000'))
+	image.fill(with_color)
 	texture = ImageTexture.create_from_image(image)
 	$PenCanvas.texture = texture
+
+func clear_canvas() -> void:
+	init_canvas(Color(1, 1, 1, 0))
 
 func draw_on_canvas(pos: Vector2i) -> void:
 	if $PenCanvas.texture:
