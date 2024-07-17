@@ -9,23 +9,23 @@ var image: Image
 var texture: ImageTexture
 
 func _ready() -> void:
-	init_canvas()
 	$AnimationPlayer.play('default')
 	$ScreenLabel.reset()
-	$ScreenLabel.set_text_number(randi_range(1, 300))
+	$ScreenLabel.set_label()
 
 func _input(event) -> void:
 	if event is InputEventMouseButton:
 		mouse_pressed = event.pressed
 	if event is InputEventMouseMotion and mouse_pressed:
-		draw_on_canvas(event.position)
+		draw_on_canvas($PenCanvas.get_local_mouse_position())
 
 func _on_menu_button_pressed() -> void:
 	$ButtonList.hide()
 	$MenuPopUp/Menu.show_popup()
 
 func init_canvas() -> void:
-	image = Image.create(int(get_viewport_rect().size.x), int(get_viewport_rect().size.y), false, Image.FORMAT_RGBA8)
+	# image = Image.create(int(get_viewport_rect().size.x), int(get_viewport_rect().size.y), false, Image.FORMAT_RGBA8)
+	image = Image.create(int($PenCanvas.size.x), int($PenCanvas.size.y), false, Image.FORMAT_RGBA8)
 	image.fill(Color('000000'))
 	texture = ImageTexture.create_from_image(image)
 	$PenCanvas.texture = texture

@@ -3,13 +3,7 @@
 [ext_resource type="Script" path="res://project/properties/screen_label.gd" id="1_iw3sy"]
 [ext_resource type="Script" path="res://project/properties/pen_detector.gd" id="2_mth6f"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o0lyx"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.976471, 0.00392157, 0.00392157, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q11f3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nuv3"]
 bg_color = Color(0.376471, 0.376471, 0.376471, 0)
@@ -26,7 +20,24 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_iw3sy")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 4
+
 [node name="Label" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -40,7 +51,7 @@ offset_bottom = 351.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 500
-theme_override_styles/normal = SubResource("StyleBoxFlat_o0lyx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_q11f3")
 text = "300"
 horizontal_alignment = 1
 vertical_alignment = 2
@@ -52,10 +63,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -399.0
-offset_top = -174.0
+offset_left = -400.0
+offset_top = -400.0
 offset_right = 400.0
-offset_bottom = 207.0
+offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -1008,6 +1019,681 @@ mouse_default_cursor_shape = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
 script = ExtResource("2_mth6f")
 
+[node name="Panel106" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel107" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel108" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel109" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel110" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel111" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel112" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel113" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel114" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel115" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel116" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel117" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel118" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel119" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel120" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel121" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel122" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel123" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel124" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel125" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel126" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel127" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel128" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel129" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel130" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel131" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel132" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel133" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel134" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel135" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel136" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel137" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel138" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel139" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel140" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel141" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel142" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel143" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel144" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel145" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel146" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel147" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel148" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel149" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel150" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel151" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel152" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel153" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel154" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel155" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel156" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel157" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel158" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel159" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel160" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel161" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel162" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel163" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel164" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel165" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel166" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel167" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel168" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel169" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel170" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel171" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel172" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel173" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel174" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel175" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel176" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel177" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel178" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel179" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
+[node name="Panel180" type="Panel" parent="PenDetector"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6nuv3")
+script = ExtResource("2_mth6f")
+
 [connection signal="mouse_entered" from="PenDetector/Panel1" to="PenDetector/Panel1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PenDetector/Panel1" to="PenDetector/Panel1" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="PenDetector/Panel2" to="PenDetector/Panel2" method="_on_mouse_entered"]
@@ -1218,3 +1904,153 @@ script = ExtResource("2_mth6f")
 [connection signal="mouse_exited" from="PenDetector/Panel104" to="PenDetector/Panel104" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="PenDetector/Panel105" to="PenDetector/Panel105" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="PenDetector/Panel105" to="PenDetector/Panel105" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel106" to="PenDetector/Panel106" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel106" to="PenDetector/Panel106" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel107" to="PenDetector/Panel107" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel107" to="PenDetector/Panel107" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel108" to="PenDetector/Panel108" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel108" to="PenDetector/Panel108" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel109" to="PenDetector/Panel109" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel109" to="PenDetector/Panel109" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel110" to="PenDetector/Panel110" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel110" to="PenDetector/Panel110" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel111" to="PenDetector/Panel111" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel111" to="PenDetector/Panel111" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel112" to="PenDetector/Panel112" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel112" to="PenDetector/Panel112" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel113" to="PenDetector/Panel113" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel113" to="PenDetector/Panel113" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel114" to="PenDetector/Panel114" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel114" to="PenDetector/Panel114" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel115" to="PenDetector/Panel115" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel115" to="PenDetector/Panel115" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel116" to="PenDetector/Panel116" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel116" to="PenDetector/Panel116" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel117" to="PenDetector/Panel117" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel117" to="PenDetector/Panel117" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel118" to="PenDetector/Panel118" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel118" to="PenDetector/Panel118" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel119" to="PenDetector/Panel119" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel119" to="PenDetector/Panel119" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel120" to="PenDetector/Panel120" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel120" to="PenDetector/Panel120" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel121" to="PenDetector/Panel121" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel121" to="PenDetector/Panel121" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel122" to="PenDetector/Panel122" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel122" to="PenDetector/Panel122" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel123" to="PenDetector/Panel123" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel123" to="PenDetector/Panel123" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel124" to="PenDetector/Panel124" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel124" to="PenDetector/Panel124" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel125" to="PenDetector/Panel125" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel125" to="PenDetector/Panel125" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel126" to="PenDetector/Panel126" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel126" to="PenDetector/Panel126" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel127" to="PenDetector/Panel127" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel127" to="PenDetector/Panel127" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel128" to="PenDetector/Panel128" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel128" to="PenDetector/Panel128" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel129" to="PenDetector/Panel129" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel129" to="PenDetector/Panel129" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel130" to="PenDetector/Panel130" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel130" to="PenDetector/Panel130" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel131" to="PenDetector/Panel131" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel131" to="PenDetector/Panel131" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel132" to="PenDetector/Panel132" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel132" to="PenDetector/Panel132" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel133" to="PenDetector/Panel133" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel133" to="PenDetector/Panel133" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel134" to="PenDetector/Panel134" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel134" to="PenDetector/Panel134" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel135" to="PenDetector/Panel135" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel135" to="PenDetector/Panel135" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel136" to="PenDetector/Panel136" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel136" to="PenDetector/Panel136" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel137" to="PenDetector/Panel137" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel137" to="PenDetector/Panel137" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel138" to="PenDetector/Panel138" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel138" to="PenDetector/Panel138" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel139" to="PenDetector/Panel139" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel139" to="PenDetector/Panel139" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel140" to="PenDetector/Panel140" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel140" to="PenDetector/Panel140" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel141" to="PenDetector/Panel141" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel141" to="PenDetector/Panel141" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel142" to="PenDetector/Panel142" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel142" to="PenDetector/Panel142" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel143" to="PenDetector/Panel143" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel143" to="PenDetector/Panel143" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel144" to="PenDetector/Panel144" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel144" to="PenDetector/Panel144" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel145" to="PenDetector/Panel145" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel145" to="PenDetector/Panel145" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel146" to="PenDetector/Panel146" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel146" to="PenDetector/Panel146" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel147" to="PenDetector/Panel147" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel147" to="PenDetector/Panel147" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel148" to="PenDetector/Panel148" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel148" to="PenDetector/Panel148" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel149" to="PenDetector/Panel149" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel149" to="PenDetector/Panel149" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel150" to="PenDetector/Panel150" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel150" to="PenDetector/Panel150" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel151" to="PenDetector/Panel151" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel151" to="PenDetector/Panel151" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel152" to="PenDetector/Panel152" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel152" to="PenDetector/Panel152" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel153" to="PenDetector/Panel153" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel153" to="PenDetector/Panel153" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel154" to="PenDetector/Panel154" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel154" to="PenDetector/Panel154" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel155" to="PenDetector/Panel155" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel155" to="PenDetector/Panel155" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel156" to="PenDetector/Panel156" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel156" to="PenDetector/Panel156" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel157" to="PenDetector/Panel157" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel157" to="PenDetector/Panel157" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel158" to="PenDetector/Panel158" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel158" to="PenDetector/Panel158" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel159" to="PenDetector/Panel159" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel159" to="PenDetector/Panel159" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel160" to="PenDetector/Panel160" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel160" to="PenDetector/Panel160" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel161" to="PenDetector/Panel161" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel161" to="PenDetector/Panel161" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel162" to="PenDetector/Panel162" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel162" to="PenDetector/Panel162" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel163" to="PenDetector/Panel163" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel163" to="PenDetector/Panel163" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel164" to="PenDetector/Panel164" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel164" to="PenDetector/Panel164" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel165" to="PenDetector/Panel165" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel165" to="PenDetector/Panel165" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel166" to="PenDetector/Panel166" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel166" to="PenDetector/Panel166" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel167" to="PenDetector/Panel167" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel167" to="PenDetector/Panel167" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel168" to="PenDetector/Panel168" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel168" to="PenDetector/Panel168" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel169" to="PenDetector/Panel169" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel169" to="PenDetector/Panel169" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel170" to="PenDetector/Panel170" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel170" to="PenDetector/Panel170" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel171" to="PenDetector/Panel171" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel171" to="PenDetector/Panel171" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel172" to="PenDetector/Panel172" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel172" to="PenDetector/Panel172" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel173" to="PenDetector/Panel173" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel173" to="PenDetector/Panel173" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel174" to="PenDetector/Panel174" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel174" to="PenDetector/Panel174" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel175" to="PenDetector/Panel175" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel175" to="PenDetector/Panel175" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel176" to="PenDetector/Panel176" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel176" to="PenDetector/Panel176" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel177" to="PenDetector/Panel177" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel177" to="PenDetector/Panel177" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel178" to="PenDetector/Panel178" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel178" to="PenDetector/Panel178" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel179" to="PenDetector/Panel179" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel179" to="PenDetector/Panel179" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="PenDetector/Panel180" to="PenDetector/Panel180" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PenDetector/Panel180" to="PenDetector/Panel180" method="_on_mouse_exited"]

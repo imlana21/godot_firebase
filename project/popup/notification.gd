@@ -1,5 +1,7 @@
 extends Control
 
+signal notif_closed
+
 func set_reward(
 	reward: float,
 	title: String = 'Congratulations !!!',
@@ -15,4 +17,5 @@ func set_reward(
 	show()
 
 func _on_close_button_pressed() -> void:
+	notif_closed.emit()
 	hide()

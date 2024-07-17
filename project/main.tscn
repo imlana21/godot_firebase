@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://clldij5tytar4"]
+[gd_scene load_steps=12 format=3 uid="uid://clldij5tytar4"]
 
 [ext_resource type="Script" path="res://project/main.gd" id="1_ymab0"]
-[ext_resource type="Texture2D" uid="uid://cvdqonx3j38yq" path="res://assets/mommy.jpg" id="2_npxnc"]
 [ext_resource type="PackedScene" uid="uid://1bwpm6v07hqy" path="res://project/properties/screen_label.tscn" id="4_5xpgr"]
 [ext_resource type="PackedScene" uid="uid://b1y0ncjjxywn0" path="res://project/popup/currencies.tscn" id="4_mmdyd"]
 [ext_resource type="PackedScene" uid="uid://cxulomjg4nd6x" path="res://project/popup/level.tscn" id="5_0s8jw"]
@@ -201,7 +200,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ymab0")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ScreenLabel" parent="." instance=ExtResource("4_5xpgr")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+
+[node name="PenCanvas" type="TextureRect" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -209,27 +223,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1099.0
-offset_top = -640.0
-offset_right = 2711.0
-offset_bottom = 1492.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.6, 0.6)
-mouse_filter = 2
-texture = ExtResource("2_npxnc")
-
-[node name="ScreenLabel" parent="." instance=ExtResource("4_5xpgr")]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-scale = Vector2(0.5, 0.5)
-
-[node name="PenCanvas" type="TextureRect" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -400.0
+offset_right = 400.0
+offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
