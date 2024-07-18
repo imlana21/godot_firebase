@@ -13,3 +13,7 @@ func _on_play_button_pressed() -> void:
 func show_popup() -> void:
 	show()
 	is_popup = true
+
+func _on_minus_10k_button_pressed():
+	Game.player_data.coin -= 10000
+	Game.update_database()

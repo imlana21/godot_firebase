@@ -20,8 +20,7 @@ func set_player_data(val) -> void:
     player_data = data
     init_level()
     update_database()
-    print(data)
-
+    
 func update_database() -> void:
     var firestore_collection : FirestoreCollection = await Firebase.Firestore.collection('currencies')
     var firestore_document: FirestoreDocument = await firestore_collection.get_doc(player_data.user)
