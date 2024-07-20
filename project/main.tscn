@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://clldij5tytar4"]
+[gd_scene load_steps=14 format=3 uid="uid://clldij5tytar4"]
 
 [ext_resource type="Script" path="res://project/main.gd" id="1_ymab0"]
 [ext_resource type="PackedScene" uid="uid://1bwpm6v07hqy" path="res://project/properties/screen_label.tscn" id="4_5xpgr"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cwgwkxcfitghp" path="res://project/popup/_component/notification.tscn" id="6_5fmds"]
 [ext_resource type="PackedScene" uid="uid://ca16entbsidfp" path="res://project/popup/second_menu/menu.tscn" id="8_8dhdr"]
 [ext_resource type="PackedScene" uid="uid://du103jf4vx4ky" path="res://project/popup/setting/setting.tscn" id="8_cdjux"]
+[ext_resource type="PackedScene" uid="uid://5suj1oy8mnow" path="res://project/popup/wheel/wheel.tscn" id="9_fdtd6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0pxa8"]
 bg_color = Color(0.633757, 0.633757, 0.633757, 1)
@@ -290,6 +291,9 @@ scale = Vector2(0.5, 0.5)
 [node name="Setting" parent="MenuPopUp" instance=ExtResource("8_cdjux")]
 
 [node name="SecondMenu" parent="MenuPopUp" instance=ExtResource("8_8dhdr")]
+visible = false
+
+[node name="WheelPopup" parent="MenuPopUp" instance=ExtResource("9_fdtd6")]
 visible = false
 
 [connection signal="pressed" from="ButtonList/MenuButton" to="." method="_on_menu_button_pressed"]

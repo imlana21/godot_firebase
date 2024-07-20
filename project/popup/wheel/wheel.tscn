@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://5suj1oy8mnow"]
+
+[ext_resource type="Texture2D" uid="uid://mh72ai46kykj" path="res://assets/img/object/wheel.png" id="1_le0pg"]
+[ext_resource type="Script" path="res://project/popup/wheel/wheel.gd" id="1_lqdp8"]
+[ext_resource type="Texture2D" uid="uid://ccmj7d3eiepw" path="res://assets/img/object/wheel_pointer.png" id="2_3simw"]
+[ext_resource type="Theme" uid="uid://cyryjcs8wh6fi" path="res://project/popup/popup.tres" id="3_ltl5q"]
+
+[node name="WheelPopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+mouse_filter = 2
+script = ExtResource("1_lqdp8")
+
+[node name="ColorRect" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -650.0
+offset_top = -641.0
+offset_right = 650.0
+offset_bottom = 877.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("3_ltl5q")
+
+[node name="SpriteList" type="Node2D" parent="."]
+position = Vector2(720, 1280)
+
+[node name="Content" type="Sprite2D" parent="SpriteList"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_le0pg")
+
+[node name="Pointer" type="Sprite2D" parent="SpriteList"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_3simw")
+
+[node name="SpinBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = 716.0
+offset_right = 4.0
+offset_bottom = 724.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("3_ltl5q")
+text = "Spin"
+
+[node name="CloseBtn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 548.0
+offset_top = -660.0
+offset_right = 636.0
+offset_bottom = -515.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ltl5q")
+text = "X"
+
+[connection signal="pressed" from="SpinBtn" to="." method="_on_spin_btn_pressed"]
+[connection signal="pressed" from="CloseBtn" to="." method="_on_close_btn_pressed"]

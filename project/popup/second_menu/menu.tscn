@@ -145,7 +145,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ColorRect2" type="PanelContainer" parent="Bottom"]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -162,7 +161,6 @@ mouse_filter = 2
 theme = ExtResource("1_kg8p0")
 
 [node name="RandomCoinButton" type="Button" parent="Bottom"]
-visible = false
 layout_mode = 0
 offset_left = 886.0
 offset_top = 2159.0
@@ -190,4 +188,5 @@ wait_time = 10.0
 one_shot = true
 
 [connection signal="pressed" from="PlayButton/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Bottom/Minus10KButton" to="." method="_on_minus_10k_button_pressed"]
 [connection signal="pressed" from="Bottom/RandomCoinButton" to="." method="_on_random_coin_button_pressed"]
