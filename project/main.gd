@@ -3,7 +3,7 @@ extends Control
 var mouse_pressed: bool = false
 var curr_line: Line2D
 var registered_number: Array = []
-var brush_size: int = 15
+var brush_size: int = 25
 var brush_color: Color = Color(1, 1, 1, 0)
 var image: Image
 var texture: ImageTexture

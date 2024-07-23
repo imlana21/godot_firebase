@@ -5,19 +5,19 @@ var mouse_clicked: bool = false
 var label_value: int = 0
 var fruit_list: Array = [
 	{
-		'name': 'apple',
+		'name': 'banana',
 		'start_range': 1,
 		'end_range': 100,
 		'percent': 0
 	},
 	{
-		'name': 'orange',
+		'name': 'kiwi',
 		'start_range': 100,
 		'end_range': 200,
 		'percent': 0
 	},
 	{
-		'name': 'watermelon',
+		'name': 'lemon',
 		'start_range': 200,
 		'end_range': 300,
 		'percent': 0
@@ -29,13 +29,19 @@ var fruit_list: Array = [
 		'percent': 75
 	},
 	{
-		'name': 'strawberry',
+		'name': 'pump',
 		'start_range': 400,
 		'end_range': 500,
 		'percent': 25
 	},
+	{
+		'name': 'watermelon',
+		'start_range': 500,
+		'end_range': 600,
+		'percent': 25
+	},
 ]
-var max_pen_grind: int = 0
+var max_pen_grid: int = 0
 
 func _input(event: InputEvent):
 	if event is InputEventMouseButton and !Game.prevent_mouse:
@@ -43,7 +49,7 @@ func _input(event: InputEvent):
 
 func _ready():
 	pen_grid_count = 0
-	max_pen_grind = round($PenDetector.get_child_count() * 0.6)
+	max_pen_grid = round($PenDetector.get_child_count() * 0.6)
 	var menu_popup = get_parent().find_child('MenuPopUp')
 	if menu_popup:
 		menu_popup.find_child('Notification').connect('notif_closed', set_label)
@@ -53,7 +59,7 @@ func _ready():
 func inc_pen_grid_count():
 	if mouse_clicked and !Game.prevent_mouse:
 		pen_grid_count += 1
-		if pen_grid_count == max_pen_grind:
+		if pen_grid_count == max_pen_grid:
 			if Game.level_up(label_value):
 				Game.prevent_mouse = true
 				get_parent().clear_canvas()
