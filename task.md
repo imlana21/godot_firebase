@@ -1,5 +1,9 @@
-Make the scratch area bigger ( about 50% bigger ) (ok)
+- make the scratch ticket mouse slightly bigger
 
-make it so if the item is scratched over 85% it automatically solves the scratch and gives the coins (ok)
+- double check on mobile phone that you can scratch with your finger.
 
-make a ‘second’ main menu that’s able to be viewed by a button on the main menu and in the second main menu put a button that makes the player look at the main menu
+- think about ways / look into more on connecting the app to look at a email sending. ( app sending a email ) 
+  
+- And make sure whatever you think of is doable and possible
+
+dT-9vY!heagzFs5

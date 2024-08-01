@@ -6,3 +6,4 @@ ios_plugins/
 android
 export_presets.cfg
 _catatan
+.env

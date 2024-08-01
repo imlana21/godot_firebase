@@ -14,10 +14,16 @@ func _ready() -> void:
 	$ScreenLabel.set_label()
 
 func _input(event) -> void:
-	if event is InputEventMouseButton:
-		mouse_pressed = event.pressed
-	if event is InputEventMouseMotion and mouse_pressed:
-		draw_on_canvas($PenCanvas.get_local_mouse_position())
+	if OS.get_name() == "Android":
+		if event is InputEventScreenTouch or event is InputEventScreenDrag:
+			var local_pos = $PenCanvas.get_local_mouse_position()
+			$Debugger.text = str(local_pos)
+			draw_on_canvas(Vector2i(local_pos.x, local_pos.y))
+	else:
+		if event is InputEventMouseButton:
+			mouse_pressed = event.pressed
+		if event is InputEventMouseMotion and mouse_pressed:
+			draw_on_canvas($PenCanvas.get_local_mouse_position())
 
 func _on_menu_button_pressed() -> void:
 	$ButtonList.hide()
@@ -35,8 +41,8 @@ func clear_canvas() -> void:
 
 func draw_on_canvas(pos: Vector2i) -> void:
 	if $PenCanvas.texture:
-		for i in range( - brush_size, brush_size):
-			for j in range( - brush_size, brush_size):
+		for i in range(-brush_size, brush_size):
+			for j in range(-brush_size, brush_size):
 				var dist = sqrt(i * i + j * j)
 				if dist < brush_size:
 					var pixel_pos = Vector2i(pos.x + i, pos.y + j)

@@ -44,6 +44,9 @@ var fruit_list: Array = [
 var max_pen_grid: int = 0
 
 func _input(event: InputEvent):
+	if OS.get_name() == "Android":
+		if event is InputEventScreenTouch or event is InputEventScreenDrag:
+			mouse_clicked = event.pressed
 	if event is InputEventMouseButton and !Game.prevent_mouse:
 		mouse_clicked = event.pressed
 
